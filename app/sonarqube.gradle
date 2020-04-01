@@ -29,4 +29,4 @@ sonarqube {
 }
 
 //Run:
-//./gradlew clean connectedAndroidTest test createDebugCoverageReport combinedTestReportDebug sonarqube
+//./gradlew jacocoTestReport
