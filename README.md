@@ -31,7 +31,7 @@ toolVersion = "0.8.4" }
 Com essa configuração você pode rodar o cover de teste unitário e visualizar no arquivo index.html na pasta app/build/reports/jacoco/jacocoTest{nome da sua flavor}UnitTestReport/html/index.html
 ```bash
 ./gradlew jacocoTest{nome da sua flavor}gUnitTestReport ```
-
+ ```
 # Adicione o plugin do SonarQube
   Primeiro, adicione ao build.gradle de nível de projeto:
   ```groovy
@@ -106,3 +106,4 @@ https://mobiosolutions.com/install-sonarqube-installation-guide-mac-os/
 
 # Conclusão
 O cover fica um pouco diferente do jacoco e do sonar, acredito, que o sonar pega as duas colunas do jacoco missed instructions e missed branches e faz uma médias (missed instructions + missed branches) / 2.
+Desculpem, foi o mais perto que consegui chegar de fazer um bom trabalho.
