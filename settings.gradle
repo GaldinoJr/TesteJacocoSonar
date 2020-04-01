@@ -1,0 +1,2 @@
+rootProject.name='TesteJacocoSonar'
+include ':app'
