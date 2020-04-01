@@ -1,0 +1,47 @@
+jacocoAndroidUnitTestReport {
+    excludes += ['**/AutoValue_*.*',
+                 '**/*JavascriptBridge.class',
+                 '**/MainPresenter2**',
+                 '**/*Activity*']
+    csv.enabled false
+    html.enabled true
+    xml.enabled true
+}
+
+
+//    excludes = [
+//            //packages
+//            '**/domain/**',
+//            '**/di/**',
+//            '**/gps/**',
+//            '**/extension/**',
+//            '**/encrypt/**',
+//            '**/view/**',
+//            '**/preferences/**',
+//            '**/firebase/**',
+//            '**/mvp/**',
+//            '**/androidutils/**',
+//            //class
+//            '**/MyApplication**',
+//            '**/BuildConfig**',
+//            '**/R*.class',
+//            '**/*Dialog*',
+//            '**/endpoint',
+//            '**/Util**',
+//            '**/AnimationUtil**',
+//            '**/ToastUtil**',
+//            '**/ImagePickerUtil**',
+//            '**/MyKeyBoardUtilsControl**',
+//            '**/App**',
+//            '**/Constant**',
+//            '**/SchedulerProvider**',
+//            //names
+//            '**/*Service*',
+//            '**/*Tasks*',
+//            '**/*Tasks*',
+//            '**/*BroadcastReceiver*',
+//            '**/*Activity*',
+//            '**/*Fragment*',
+//            '**/*Adapter*'
+//
+//    ] // type String List

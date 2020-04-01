@@ -4,24 +4,12 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.android.application'
 apply plugin: 'jacoco-android'
 apply plugin: "org.sonarqube"
+// importar o arquivo do jacoco e do sonar
+apply from: './jacoco.gradle'
 apply from: './sonarqube.gradle'
 
 jacoco {
     toolVersion = "0.8.4"
-}
-//
-//tasks.withType(Test) {
-//    jacoco.includeNoLocationClasses = true
-//}
-//
-jacocoAndroidUnitTestReport {
-    excludes += ['**/AutoValue_*.*',
-                 '**/*JavascriptBridge.class',
-                 '**/MainPresenter2**',
-                 '**/*Activity*']
-    csv.enabled false
-    html.enabled true
-    xml.enabled true
 }
 
 android {
