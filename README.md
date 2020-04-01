@@ -71,30 +71,27 @@ allprojects {
 Em seguida crie um arquivo chamado `./sonarqube.gradle` e adicione essas linhas a ela:
 obs.: ver o caminho do .xml gerado pelo jacoco (muda conforme a flavor), e configure corretamente os itens: sonar.coverage.jacoco.xmlReportPaths e sonar.junit.reportsPath
 ```groovy
-sonarqube {
-	properties {
-		 sonarqube {
-  properties {
-  property "sonar.projectName", "TestJacocoSonar2"
-  property "sonar.projectKey", "TestJacocoSonar2"
-  property "sonar.host.url", "http://localhost:9000"
-  // colocar para rodar no server
-  // property "sonar.host.url", "url do host"
-  // property "sonar.login", "key"
-  // property "sonar.password", ""
-  property "sonar.exclusions",
-                    '**/MainPresenter2**,' +
-                    '**/*Activity*'
 
-  property "sonar.sources", "src/main"
-  property "sonar.java.binaries", "build/tmp/kotlin-classes"
-  property "sonar.tests", "src/test"
-  property "sonar.coverage.jacoco.xmlReportPaths", "build/reports/jacoco/jacocoTestDebugUnitTestReport/jacocoTestDebugUnitTestReport.xml"
-  property "sonar.junit.reportsPath", "build/reports/jacoco/jacocoTestDebugUnitTestReport/"
-  property "sonar.java.coveragePlugin", "jacoco"
-  property "sonar.android.lint.report", "build/reports/lint-results.xml"
-  }
-}
+sonarqube {
+  properties {
+	  property "sonar.projectName", "TestJacocoSonar2"
+	  property "sonar.projectKey", "TestJacocoSonar2"
+	  property "sonar.host.url", "http://localhost:9000"
+	  // colocar para rodar no server
+	  // property "sonar.host.url", "url do host"
+	  // property "sonar.login", "key"
+	  // property "sonar.password", ""
+	  property "sonar.exclusions",
+	                    '**/MainPresenter2**,' +
+	                    '**/*Activity*'
+
+	  property "sonar.sources", "src/main"
+	  property "sonar.java.binaries", "build/tmp/kotlin-classes"
+	  property "sonar.tests", "src/test"
+	  property "sonar.coverage.jacoco.xmlReportPaths", "build/reports/jacoco/jacocoTestDebugUnitTestReport/jacocoTestDebugUnitTestReport.xml"
+	  property "sonar.junit.reportsPath", "build/reports/jacoco/jacocoTestDebugUnitTestReport/"
+	  property "sonar.java.coveragePlugin", "jacoco"
+	  property "sonar.android.lint.report", "build/reports/lint-results.xml"
 	}
 }
 ```
