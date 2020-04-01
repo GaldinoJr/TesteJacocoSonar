@@ -35,17 +35,30 @@ Com essa configuração você pode rodar o cover de teste unitário e visualizar
 # Adicione o plugin do SonarQube
   Primeiro, adicione ao build.gradle de nível de projeto:
   ```groovy
+repositories {
+  ..
+    // sonar
+	  maven {
+		  url "https://plugins.gradle.org/m2/"
+	  }
+  }
+ ```
+ ```groovy
 buildscript {
- repositories { //... maven { url "https://plugins.gradle.org/m2/" } }}
- ``````groovy
-buildscript {
- dependencies { //... classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.4.RELEASE")   classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.8"
+ dependencies {
+	 // sonar
+	classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.4.RELEASE")
+	classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.8"
     }
 }
 ```
 ```groovy
 allprojects {
- repositories { //... maven { url "https://plugins.gradle.org/m2/" } }}
+	 // sonar
+	maven {
+	  url "https://plugins.gradle.org/m2/"
+	}
+}
 ```
 Em seguida crie um arquivo chamado `./sonarqube.gradle` e adicione essas linhas a ela:
 obs.: ver o caminho do .xml gerado pelo jacoco (muda conforme a flavor), e configure corretamente os itens: sonar.coverage.jacoco.xmlReportPaths e sonar.junit.reportsPath
