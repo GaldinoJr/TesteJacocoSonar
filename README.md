@@ -106,4 +106,3 @@ https://mobiosolutions.com/install-sonarqube-installation-guide-mac-os/
 
 # Conclusão
 O cover fica um pouco diferente do jacoco e do sonar, acredito, que o sonar pega as duas colunas do jacoco missed instructions e missed branches e faz uma médias (missed instructions + missed branches) / 2.
-Desculpem, foi o mais perto que consegui chegar de fazer um bom trabalho.
